@@ -49,7 +49,7 @@ public class AppConfiguration  implements WebMvcConfigurer, ApplicationContextAw
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan("com.codegym.model");
+        em.setPackagesToScan("com.codegym.thuchanhapi.model");
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
@@ -61,7 +61,7 @@ public class AppConfiguration  implements WebMvcConfigurer, ApplicationContextAw
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/customer_restful");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/customer_restful1");
         dataSource.setUsername("root");
         dataSource.setPassword("123456");
         return dataSource;
